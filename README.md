@@ -39,7 +39,7 @@ The server should now be running at `http://localhost:3000`.
 1. Ensure you have Flutter installed. If not, follow the [Flutter installation guide](https://flutter.dev/docs/get-started/install).
 2. Navigate to the `Client` folder: `cd Client/stepsquad`.
 3. Open the project in your preferred text editor or IDE.
-4. Navigate to the utils.dart file located at `Client/stepsquad/lib/utils/utils.dart`.
+4. Navigate to the `utils.dart` file located at `Client/stepsquad/lib/utils/utils.dart`.
 5. Inside the file, locate the `baseURL` variable. It should be defined as a string.
 6. Replace the existing value of baseURL with your own IP address
    If you're not sure how to find your IP address, you can follow the instructions below based on your operating system:
