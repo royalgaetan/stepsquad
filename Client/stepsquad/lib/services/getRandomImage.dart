@@ -3,7 +3,7 @@ import 'package:stepsquad/utils/utils.dart';
 
 Future<String> fetchRandomImage({int? photoIndex}) async {
   try {
-    Dio dio = Dio();
+    Dio dio = createDioInstance();
 
     // Make a GET request to the Pexels API
     Response response = await dio.get(

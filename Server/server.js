@@ -42,7 +42,7 @@ app.use(bodyParser.json());
 
 // Simple endpoint
 app.get("/", (req, res) => {
-  res.send("Hello masta!");
+  res.send("Step Squad Server is running...");
 });
 
 // Register endpoint

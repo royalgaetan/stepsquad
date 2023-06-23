@@ -1,13 +1,21 @@
 import 'dart:math';
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:timeago/timeago.dart' as timeago;
 
 // CONSTANTS
-String server = 'http://192.168.8.23:3000';
+String baseURL = 'http://192.168.8.23';
 String pexelAPIKey = "bfO2zV2du4kfuqsraW9gI3j8lwm9SXtQAJ3yTAHOHz6vIRckTC6Y0C6k";
 
 // Colors
 Color kPrimaryColor = Colors.purple.shade600;
+
+// Create Dio instance
+Dio createDioInstance() {
+  return Dio(BaseOptions(
+    baseUrl: '$baseURL:3000',
+  ));
+}
 
 // Snackbar
 showSnackBar({required context, required content, Color? backgroundColor}) {

@@ -16,10 +16,10 @@ Future<void> loginUser({required BuildContext context, required String username,
 
   try {
     // Create an instance of Dio
-    Dio dio = Dio();
+    Dio dio = createDioInstance();
 
     // Make a POST request to the login endpoint
-    Response response = await dio.post('$server/login', data: {
+    Response response = await dio.post('/login', data: {
       'username': username.trim(),
       'password': password.trim(),
     });
@@ -73,9 +73,9 @@ saveUserInDatabase({required BuildContext context, required String username, req
   Future.delayed(const Duration(seconds: 1));
 
   // Make API call to Node.js server using Dio
-  Dio dio = Dio();
+  Dio dio = createDioInstance();
   try {
-    Response response = await dio.post('$server/register', data: {
+    Response response = await dio.post('/register', data: {
       'username': username.trim(),
       'password': password.trim(),
     });
@@ -151,10 +151,10 @@ logoutUser({required BuildContext context}) async {
 Future<List<dynamic>> getAllUsers() async {
   try {
     // Create an instance of Dio
-    Dio dio = Dio();
+    Dio dio = createDioInstance();
 
     // Make a GET request to get all users
-    Response response = await dio.get('$server/users');
+    Response response = await dio.get('/users');
 
     if (response.statusCode == 200) {
       return response.data as List<dynamic>;
